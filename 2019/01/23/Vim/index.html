@@ -65,7 +65,7 @@
                     <span>TAGS</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
                     <span>ARCHIVES</span>
@@ -80,6 +80,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
     
 </div>
 
@@ -106,50 +110,34 @@
         
 
 
-<!-- 归档列表 -->
-
-<div class="archives-container">
-
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-    <ul>
+<div class="post-container">
+    <div class="post-title">
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>01-23</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/01/23/Vim/">
-                        <span>
-                            Untitled
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>01-04</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/01/04/hello-world/">
-                        <span>
-                            Hello World
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
+    </div>
 
-    </ul>
-</div>
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-01-23 12:56:30</span></span>
+        
+        
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
 
+    </div>
+    <div class="post-content ">
+        <p>三种模式：命令模式、插入模式、编辑模式<br>输入vim/vi  filename  进入文本的命令模式<br>输入i/a/o 进入文本的插入模式<br>输入:[cmd]    进入文本的编辑模式</p>
+<p>常用命令：<br>1、插入命令<br>a/i   在光标所在字符后/前插入<br>A/I   在光标所在行尾/首插入<br>o    在光标下插入新行<br>O    在光标上插入新行<br>2、定位命令<br>:set nu/nonu    设置/取消行号<br>gg/G          到第一行/最后一行<br>nG/:n         到第n行<br>$/0               移动至行尾/首<br>3、删除命令<br>x/nx      删除光标所在处字符/后n个字符<br>dd/ndd   删除光标所在行/n行<br>D      删除光标所在处到行尾内容<br>:n1,n2d     删除指定范围的行<br>4、复制/剪切、粘贴命令<br>yy/nyy       复制光标所在行/n行<br>dd/ndd      剪切光标所在行/n行<br>p/P            粘贴在光标所在行下/行上<br>5、搜索、替换、恢复命令<br>/string    搜索指定字符串，:set ic 表示搜索时忽略大小写<br>n             搜索指定字符串的下一个出现位置<br>:%s/old/new/g     全文替换指定字符串，g表示不询问，相应的c表示询问是否替换<br>6、保存、退出命令<br>:q!       不保存退出<br>:w        保存<br>:wq     保存退出</p>
+<p>特殊命令<br>:r filename  将filename中的全部内容导入到光标所在位置之后</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
 </div>
     </div>
 </div>
@@ -189,7 +177,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
